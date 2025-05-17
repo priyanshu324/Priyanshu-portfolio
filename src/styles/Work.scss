@@ -129,7 +129,7 @@
       height: auto;
 
       > img {
-        width: 20%;
+        width: auto;
         height: auto;
         max-height: 250px;
         aspect-ratio: 16 / 9;
@@ -145,14 +145,19 @@
 
         > h3 {
           font-size: 1.2rem;
+          color: #000;
         }
 
         > p {
           font-size: 0.95rem;
+          color: #000;
+
         }
 
         > a {
           font-size: 0.9rem;
+          color: #000;
+
         }
       }
 
