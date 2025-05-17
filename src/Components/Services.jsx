@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { AiFillAndroid, AiFillIeCircle, AiFillWindows } from "react-icons/ai";
+import { AiFillAndroid, AiFillIeCircle} from "react-icons/ai";
 
 const Services = () => {
     const animations = {
