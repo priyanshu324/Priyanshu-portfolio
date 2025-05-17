@@ -115,57 +115,58 @@
   }
 }
 
-// 🔁 Responsive Fix for Mobile Devices
-@media (max-width: 720px) {
+// 🔁 Custom Mobile Styling for Samsung Galaxy A30s and similar
+@media (max-width: 400px) {
   #work {
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
 
     > section > article {
       width: 100%;
     }
 
     .workItem {
-      flex-direction: row;
-      height: auto;
-      align-items: center;
+      flex-direction: column;
+      padding: 1rem;
+      width: 100%;
+      box-shadow: 0 0 10px 3px $color1;
 
       > img {
-        width: 20%;           // ✅ Reduced width for mobile
-        height: auto;
-        max-height: 200px;    // ✅ Controlled image height
+        width: 90%;             // Slightly smaller image
+        max-height: 180px;      // Reduced max height
+        border-radius: 12px;
         aspect-ratio: 4 / 3;
         object-fit: cover;
         margin-bottom: 1rem;
-        border-radius: 12px;
       }
 
       > aside {
         width: 100%;
         align-items: center;
         text-align: center;
-        padding: 1rem;
+        padding: 0.5rem;
 
         > h3 {
-          font-size: 1.2rem;
+          font-size: 1rem;
           color: #000;
         }
 
         > p {
-          font-size: 0.75rem;
+          font-size: 0.9rem;
           color: #000;
         }
 
         > a {
-          font-size: 0.5rem;
+          font-size: 0.85rem;
+          padding: 0.6rem 1rem;
           color: #000;
         }
       }
 
       .project-status {
-        top: 0.5rem;
-        right: 0.5rem;
-        font-size: 0.8rem;
-        padding: 0.2rem 0.4rem;
+        top: 0.4rem;
+        right: 0.4rem;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.3rem;
       }
     }
   }
