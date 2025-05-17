@@ -1,105 +1,156 @@
 #work {
+  width: 100%;
+  min-height: 100vh;
+  padding: 8rem $p;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  position: relative;
+
+  > h2 {
+    font: 700 2rem $text2;
+    width: fit-content;
+    border-bottom: 1px solid $color6_1;
+    padding: 0.5rem;
+    margin: auto;
+  }
+
+  > section {
+    margin-top: 4rem;
     width: 100%;
-    height: 100vh;
-    padding: 8rem $p;
-    margin-top: 10rem;
-    margin-bottom: 2rem;
-    position: relative;
-  
-    > h2 {
-      font: 700 2rem $text2;
-      width: fit-content;
-      border-bottom: 1px solid $color6_1;
-      padding: 0.5rem;
-      margin: auto;
+    height: 100%;
+    background-color: $color5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > article {
+      width: 70%;
+      min-height: 300px;
     }
-  
-    > section {
-      margin-top: 4rem;
-      width: 100%;
-      height: 100%;
-      background-color: $color5;
+
+    .workItem {
+      overflow-y: hidden;
+      min-height: 25vmax;
+      width: 95%;
+      background-color: $color4;
       display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      > article {
-        width: 70%;
-        height: 25vmax;
+      padding: 2rem;
+      box-shadow: 0 0 20px 5px $color1;
+      position: relative;
+      color: white;
+
+      .project-status {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: #ffd700;
+        color: #000;
+        font-weight: bold;
+        padding: 0.25rem 0.5rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        z-index: 10;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+        &.complete {
+          background-color: #28a745;
+          color: white;
+        }
+
+        &.upcoming {
+          background-color: #ffc107;
+          color: black;
+        }
       }
-  
-      .workItem {
-        overflow-y: hidden;
-        height: 25vmax;
-        width: 95%;
-        background-color: $color4;
+
+      > img {
+        border-radius: 20px;
+        width: 30%;
+        object-fit: cover;
+      }
+
+      > aside {
+        width: 60%;
         display: flex;
-        padding: 2rem;
-        box-shadow: 0 0 20px 5px $color1;
-        position: relative;
-  
-        // Status badge
-        .project-status {
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-          background-color: #ffd700;
-          color: #000;
-          font-weight: bold;
-          padding: 0.25rem 0.5rem;
-          border-radius: 8px;
-          font-size: 0.9rem;
-          z-index: 10;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  
-          &.complete {
-            background-color: #28a745;
-            color: white;
-          }
-  
-          &.upcoming {
-            background-color: #ffc107;
-            color: black;
-          }
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1rem;
+        color: white;
+        font-family: $text2, sans-serif;
+        font-size: 1rem;
+
+        > h3 {
+          margin-bottom: 0.5rem;
+          font-size: 1.5rem;
         }
-  
-        > img {
-          border-radius: 20px;
-          width: 30%;
-          object-fit: cover;
+
+        > p {
+          letter-spacing: 1px;
+          line-height: 160%;
+          margin: 1rem 0;
         }
-  
-        > aside {
-          width: 60%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          color: white; // ✨ Added for visibility
-          font-family: $text2, sans-serif; // ✨ Fallback font
-          font-size: 1rem; // ✨ Readable size
-          // background-color: rgba(0, 0, 0, 0.3); // Optional: enable for contrast debugging
-  
-          > p {
-            letter-spacing: 3px;
-            line-height: 180%;
-            margin: 2rem;
-          }
-  
-          > a {
-            background-color: $color3;
-            padding: 0.7rem 2rem;
-            margin: 2rem;
-            color: $color4;
-            transition: all 0.5s;
-  
-            &:hover {
-              background-color: $color3_1;
-            }
+
+        > a {
+          background-color: $color3;
+          padding: 0.7rem 1.5rem;
+          margin-top: 1rem;
+          color: $color4;
+          transition: all 0.5s;
+          text-decoration: none;
+
+          &:hover {
+            background-color: $color3_1;
           }
         }
       }
     }
   }
-  
-  
+}
+
+// 🔁 Responsive Fix for Mobile Devices
+@media (max-width: 768px) {
+  #work {
+    padding: 4rem 2rem;
+
+    > section > article {
+      width: 100%;
+    }
+
+    .workItem {
+      flex-direction: column;
+      height: auto;
+
+      > img {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      > aside {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+
+        > h3 {
+          font-size: 1.2rem;
+        }
+
+        > p {
+          font-size: 0.95rem;
+        }
+
+        > a {
+          font-size: 0.9rem;
+        }
+      }
+
+      .project-status {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+      }
+    }
+  }
+}
