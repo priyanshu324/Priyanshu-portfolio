@@ -130,7 +130,7 @@
       align-items: center;
 
       > img {
-        width: 70%;           // ✅ Reduced width for mobile
+        width: 50%;           // ✅ Reduced width for mobile
         height: auto;
         max-height: 200px;    // ✅ Controlled image height
         aspect-ratio: 4 / 3;
