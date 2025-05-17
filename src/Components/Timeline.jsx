@@ -6,12 +6,11 @@ const Timeline = () => {
         <div id='timeline'>
             <div className="timelineBox">
                 {
-                    data.projects.map((item, index) => (
+                    data.frameworks.map((item, index) => (
                         <TimelineItem
                             heading={item.title}
-                            // text={item.date}
                             index={index}
-                            key={item.title}
+                            key={item.key}
 
                         />
                     ))

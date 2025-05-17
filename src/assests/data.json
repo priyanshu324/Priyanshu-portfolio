@@ -36,5 +36,24 @@
         "imgSrc":"https://res.cloudinary.com/ddisedbxn/image/upload/v1747472369/istockphoto-1201166649-1024x1024_jp6u90.jpg",
         "Status":"UpComing"
       }
+    ],
+
+    "frameworks":[
+      {
+        "key":1,
+        "title":"React.js"
+      },{
+        "key":2,
+        "title":"vue.js"
+      },{
+        "key":3,
+        "title":"Next.js"
+      },{
+        "key":4,
+        "title":"Tailwindcss.js"
+      },{
+        "key":5,
+        "title":"Node.js"
+      }
     ]
   }
