@@ -76,19 +76,22 @@
         justify-content: center;
         align-items: flex-start;
         padding: 1rem;
-        color: black;
+        color: white;
         font-family: $text2, sans-serif;
         font-size: 1rem;
 
         > h3 {
           margin-bottom: 0.5rem;
           font-size: 1.5rem;
+          color: #000;
         }
 
         > p {
           letter-spacing: 1px;
           line-height: 160%;
           margin: 1rem 0;
+          color: #000;
+
         }
 
         > a {
@@ -98,6 +101,8 @@
           color: $color4;
           transition: all 0.5s;
           text-decoration: none;
+          color: #000;
+
 
           &:hover {
             background-color: $color3_1;
