@@ -102,21 +102,4 @@
     }
   }
   
-  // 🔁 Responsive design for smaller screens
-  @media (max-width: 768px) {
-    .workItem {
-      flex-direction: column;
-      align-items: center;
-  
-      > img {
-        width: 90%;
-        margin-bottom: 1rem;
-      }
-  
-      > aside {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
   
