@@ -116,7 +116,7 @@
 }
 
 // 🔁 Responsive Fix for Mobile Devices
-@media (max-width: 384px) {
+@media (max-width: 720px) {
   #work {
     padding: 4rem 2rem;
 
@@ -130,7 +130,7 @@
       align-items: center;
 
       > img {
-        width: 50%;           // ✅ Reduced width for mobile
+        width: 20%;           // ✅ Reduced width for mobile
         height: auto;
         max-height: 200px;    // ✅ Controlled image height
         aspect-ratio: 4 / 3;
