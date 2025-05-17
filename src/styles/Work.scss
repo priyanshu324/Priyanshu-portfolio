@@ -1,67 +1,122 @@
-#work{
+#work {
     width: 100%;
     height: 100vh;
     padding: 8rem $p;
-    
-    >h2{
-        font: 700 2rem $text2;
-        width: fit-content;
-        border-bottom: 1px solid $color6_1;
-        padding: 0.5rem;
-        margin: auto;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    position: relative;
+  
+    > h2 {
+      font: 700 2rem $text2;
+      width: fit-content;
+      border-bottom: 1px solid $color6_1;
+      padding: 0.5rem;
+      margin: auto;
     }
-    >section{
-        margin-top: 4rem;
-        width: 100%;
-        height: 100%;
-        background-color: $color5;
+  
+    > section {
+      margin-top: 4rem;
+      width: 100%;
+      height: 100%;
+      background-color: $color5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      > article {
+        width: 70%;
+        height: 25vmax;
+      }
+  
+      .workItem {
+        overflow-y: hidden;
+        height: 25vmax;
+        width: 95%;
+        background-color: $color4;
         display: flex;
-        align-items: center;
-        justify-content: center;
-
-        >article{
-            width: 70%;
-            height: 25vmax;
+        padding: 2rem;
+        box-shadow: 0 0 20px 5px $color1;
+        position: relative;
+  
+        // Status badge
+        .project-status {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          background-color: #ffd700;
+          color: #000;
+          font-weight: bold;
+          padding: 0.25rem 0.5rem;
+          border-radius: 8px;
+          font-size: 0.9rem;
+          z-index: 10;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  
+          &.complete {
+            background-color: #28a745;
+            color: white;
+          }
+  
+          &.upcoming {
+            background-color: #ffc107;
+            color: black;
+          }
         }
-
-        .workItem{
-            overflow-y: hidden;
-            height: 25vmax;
-            width: 95%;
-            background-color: $color4;
-            display: flex;
-            padding: 2rem;
-            box-shadow: 0 0 20px 5px $color1;
-
-            >img{
-                border-radius: 20px;
-                width: 30%;
-                object-fit: cover;
-            }
-            >aside{
-                width: 60%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                >p{
-                    letter-spacing: 3px;
-                    line-height: 180%;
-                    margin: 2rem;
-
-                }
-                >a{
-                    background-color: $color3;
-                    padding: 0.7rem 2rem;
-                    margin: 2rem;
-                    color: $color4;
-                    transition: all 0.5s;
-                    &:hover{
-                        background-color: $color3_1;
-                    }
-                }
-            }
+  
+        > img {
+          border-radius: 20px;
+          width: 30%;
+          object-fit: cover;
         }
+  
+        > aside {
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: white; // ✨ Added for visibility
+          font-family: $text2, sans-serif; // ✨ Fallback font
+          font-size: 1rem; // ✨ Readable size
+          // background-color: rgba(0, 0, 0, 0.3); // Optional: enable for contrast debugging
+  
+          > p {
+            letter-spacing: 3px;
+            line-height: 180%;
+            margin: 2rem;
+          }
+  
+          > a {
+            background-color: $color3;
+            padding: 0.7rem 2rem;
+            margin: 2rem;
+            color: $color4;
+            transition: all 0.5s;
+  
+            &:hover {
+              background-color: $color3_1;
+            }
+          }
+        }
+      }
     }
-}
+  }
+  
+  // 🔁 Responsive design for smaller screens
+  @media (max-width: 768px) {
+    .workItem {
+      flex-direction: column;
+      align-items: center;
+  
+      > img {
+        width: 90%;
+        margin-bottom: 1rem;
+      }
+  
+      > aside {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  

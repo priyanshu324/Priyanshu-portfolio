@@ -71,12 +71,12 @@ const Home = () => {
           <article>
             <p>
               +
-             
-                <motion.span
-                  whileInView={animationClientsCount}
-                  ref={clientCount}
-                > </motion.span>
-              
+
+              <motion.span
+                whileInView={animationClientsCount}
+                ref={clientCount}
+              > </motion.span>
+
             </p>
             <span>Clients Worldwide</span>
           </article>
@@ -85,14 +85,14 @@ const Home = () => {
             <article>
               <p>
                 +
-               
-                  <motion.span
-                    ref={projectCount}
-                    whileInView={animationProjectsCount}
-                  >
-                    
-                  </motion.span>
-                
+
+                <motion.span
+                  ref={projectCount}
+                  whileInView={animationProjectsCount}
+                >
+
+                </motion.span>
+
               </p>
               <span>Projects Done</span>
             </article>
@@ -105,7 +105,7 @@ const Home = () => {
         </div>
       </section>
       <section>
-        <img src={me} alt="priyanshu" />
+        <img src={"https://res.cloudinary.com/ddisedbxn/image/upload/v1747471749/logo_eozn2a.png"} alt="priyanshu" />
       </section>
       <BsChevronDown />
     </div>

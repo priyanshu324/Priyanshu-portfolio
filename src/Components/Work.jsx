@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import data from "../assests/data.json";
 
 const Work = () => {
-  return <div id='work'>
+    return <div id='work'>
         <h2>WORK</h2>
         <section>
             <article>
@@ -19,13 +19,14 @@ const Work = () => {
                     autoPlay={true}
                 >
                     {
-                        data.projects.map((i)=>(
+                        data.projects.map((i) => (
                             <div key={i.title} className='workItem'>
+                                <span className="project-status">{i.Status}</span>
                                 <img src={i.imgSrc} alt={i.title} />
                                 <aside>
                                     <h3>{i.title}</h3>
                                     <p>{i.description}</p>
-                                    <a  href={i.url}>View Demo</a>
+                                    <a href={i.url}>View Demo</a>
                                 </aside>
                             </div>
                         ))
@@ -34,7 +35,7 @@ const Work = () => {
             </article>
         </section>
     </div>;
-  
+
 };
 
 export default Work;
